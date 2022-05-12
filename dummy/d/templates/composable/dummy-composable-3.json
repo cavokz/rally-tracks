@@ -1,0 +1,8 @@
+{
+  "index_patterns": [
+    "dummy-*"
+  ],
+  "composed_of": [
+    "dummy-component-1"
+  ]
+}

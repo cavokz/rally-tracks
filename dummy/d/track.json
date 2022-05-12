@@ -1,0 +1,41 @@
+{% import "rally.helpers" as rally with context %}
+{
+  "version": 2,
+  "description": "Component template first, then composable",
+  "component-templates": [
+    {
+      "name": "dummy-component-1",
+      "template": "./templates/component/dummy-component-1.json"
+    }
+  ],
+  "composable-templates": [
+    {
+      "name": "dummy-composable-1",
+      "index-pattern": "dummy-*",
+      "delete-matching-indices": false,
+      "template": "./templates/composable/dummy-composable-1.json"
+    },
+    {
+      "name": "dummy-composable-2",
+      "index-pattern": "dummy-*",
+      "delete-matching-indices": false,
+      "template": "./templates/composable/dummy-composable-2.json"
+    },
+    {
+      "name": "dummy-composable-3",
+      "index-pattern": "dummy-*",
+      "delete-matching-indices": false,
+      "template": "./templates/composable/dummy-composable-3.json"
+    },
+    {
+      "name": "dummy-composable-4",
+      "index-pattern": "dummy-*",
+      "delete-matching-indices": false,
+      "template": "./templates/composable/dummy-composable-4.json",
+      "template-path": "meta.index_template"
+    }
+  ],
+  "challenges": [
+    {{ rally.collect(parts="challenges/*.json") }}
+  ]
+}
