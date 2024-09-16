@@ -107,6 +107,63 @@ jobs:
             flags: --test-mode --track-params="number_of_replicas:0,snapshot_counts:1" --challenge=many-shards-snapshots
             stack-version: "8.3.2"
 
+          - name: dummy/a
+            track: dummy/a
+            flags:
+            stack-version: "8.3.2"
+
+          - name: dummy/b
+            track: dummy/b
+            flags:
+            stack-version: "8.3.2"
+
+          - name: dummy/c
+            track: dummy/c
+            flags:
+            stack-version: "8.3.2"
+
+          - name: dummy/a-b-c
+            track: dummy/a-b-c
+            flags:
+            stack-version: "8.3.2"
+          - name: dummy/a-b-c (component1-and-composable1)
+            track: dummy/a-b-c
+            flags: --challenge=component1-and-composable1
+            stack-version: "8.3.2"
+          - name: dummy/a-b-c (component1-and-composable2)
+            track: dummy/a-b-c
+            flags: --challenge=component1-and-composable2
+            stack-version: "8.3.2"
+          - name: dummy/a-b-c (composable1-and-component1)
+            track: dummy/a-b-c
+            flags: --challenge=composable1-and-component1
+            stack-version: "8.3.2"
+
+          - name: dummy/d
+            track: dummy/d
+            flags:
+            stack-version: "8.3.2"
+          - name: dummy/d (component1-and-composable1)
+            track: dummy/d
+            flags: --challenge=component1-and-composable1
+            stack-version: "8.3.2"
+          - name: dummy/d (component1-and-composable2)
+            track: dummy/d
+            flags: --challenge=component1-and-composable2
+            stack-version: "8.3.2"
+          - name: dummy/d (composable1-and-component1)
+            track: dummy/d
+            flags: --challenge=composable1-and-component1
+            stack-version: "8.3.2"
+          - name: dummy/d (component1-and-composable3)
+            track: dummy/d
+            flags: --challenge=component1-and-composable3
+            stack-version: "8.3.2"
+          - name: dummy/d (component1-and-composable4)
+            track: dummy/d
+            flags: --challenge=component1-and-composable4
+            stack-version: "8.3.2"
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2

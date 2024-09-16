@@ -1,0 +1,39 @@
+{
+  "name": "component1-and-composable2",
+  "schedule": [
+    {
+      "operation": {
+        "operation-type": "create-component-template",
+        "template": "dummy-component-1",
+        "body": {
+          "template": {
+            "settings": {
+              "number_of_shards": 1
+            },
+            "mappings": {
+              "_source": {
+                "enabled": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "operation": {
+        "operation-type": "create-composable-template",
+        "template": "dummy-template-1",
+        "body": {
+          "index_patterns": [
+            "dummy-*"
+          ],
+          "template": {
+          },
+          "composed_of": [
+            "dummy-component-2"
+          ]
+        }
+      }
+    }
+  ]
+}

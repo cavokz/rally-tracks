@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "index_template": {
+      "index_patterns": [
+        "dummy-*"
+      ],
+      "composed_of": [
+        "dummy-component-1"
+      ]
+    }
+  }
+}

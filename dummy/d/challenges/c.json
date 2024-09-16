@@ -1,0 +1,17 @@
+{
+  "name": "composable1-and-component1",
+  "schedule": [
+    {
+      "operation": {
+        "operation-type": "create-composable-template",
+        "template": "dummy-composable-1"
+      }
+    },
+    {
+      "operation": {
+        "operation-type": "create-component-template",
+        "template": "dummy-component-1"
+      }
+    }
+  ]
+}
